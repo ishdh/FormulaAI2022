@@ -239,4 +239,4 @@ class lstm_seq2seq(nn.Module):
 #Y_train.to(device)
 #X_test.to(device)
 #Y_test.to(device)
-#loss = model.train_model(X_train, Y_train, n_epochs = 50, target_len = ow, batch_size = 5, training_prediction = 'mixed_teacher_forcing', teacher_forcing_ratio = 0.6, learning_rate = 0.01, dynamic_tf = False)
+#loss = model.train_model(X_train, Y_train, n_epochs = , target_len = , batch_size = , training_prediction = 'teacher_forcing', teacher_forcing_ratio = 0.6, learning_rate = 0.01, dynamic_tf = False)
