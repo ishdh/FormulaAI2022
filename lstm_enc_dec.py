@@ -232,3 +232,11 @@ class lstm_seq2seq(nn.Module):
     	return np_outputs
 
 #to load data as a torch tensor:x_torch = torch.from_numpy(x).type(torch.Tensor)
+#device =torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#model = lstm_encoder_decoder.lstm_seq2seq(input_size = X_train.shape[2], hidden_size = 15)
+#model.to(device)
+#X_train.to(device)
+#Y_train.to(device)
+#X_test.to(device)
+#Y_test.to(device)
+#loss = model.train_model(X_train, Y_train, n_epochs = 50, target_len = ow, batch_size = 5, training_prediction = 'mixed_teacher_forcing', teacher_forcing_ratio = 0.6, learning_rate = 0.01, dynamic_tf = False)
