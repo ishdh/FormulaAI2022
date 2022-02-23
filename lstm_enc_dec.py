@@ -13,7 +13,7 @@ import torch.nn.functional as F
 class lstm_encoder(nn.Module):
 	''' Encodes time-series sequence '''
 
-	def __init__(self, input_size, hidden_size,num_layers):
+	def __init__(self, input_size, hidden_size,num_layers=4):
 		'''
         : param input_size:     the number of features in the input X
         : param hidden_size:    the number of features in the hidden state h
@@ -37,7 +37,7 @@ class lstm_encoder(nn.Module):
         :                              element in the sequence 
         '''
 
-		lstm_out, self.hidden = self.lstm(x_input.view(x_input.shape[0],x_input.shape[1],sefl.input_size))
+		lstm_out, self.hidden = self.lstm(x_input.view(x_input.shape[0],x_input.shape[1],self.input_size))
 
 		return lstm_out, self.hidden
 
@@ -55,7 +55,7 @@ class lstm_encoder(nn.Module):
 class lstm_decoder(nn.Module):	
 	''' Decodes hidden state output by encoder '''
 
-	def __init__(self, input_size, hidden_size, num_layers):
+	def __init__(self, input_size, hidden_size, num_layers=4):
 		'''
         : param input_size:     the number of features in the input X
         : param hidden_size:    the number of features in the hidden state h
